@@ -152,7 +152,7 @@ const PropertyUser = () => {
                           aria-describedby={
                             errorMessage ? `${field.id}-error` : undefined
                           }
-                          className="h-12 rounded-xl border-[#d5d7da] bg-white px-4 py-2 pr-12 text-sm text-[#0a0d12] shadow-none placeholder:text-[#98a2b3] focus-visible:ring-0 focus-visible:ring-offset-0 aria-invalid:border-destructive"
+                          className="h-12 rounded-xl border-[#d5d7da] bg-white px-4 py-2 pr-12 text-sm text-[#0a0d12] shadow-none placeholder:text-transparent focus-visible:ring-0 focus-visible:ring-offset-0 aria-invalid:border-destructive"
                         />
                         {isPassword && (
                           <button
