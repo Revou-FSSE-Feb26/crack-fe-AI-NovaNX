@@ -64,7 +64,7 @@ export function AuthFormField({
       {error && (
         <p
           id={`${id}-error`}
-          className="text-sm font-semibold leading-6 text-destructive"
+          className="text-sm font-semibold leading-6 text-red-500"
         >
           {error}
         </p>

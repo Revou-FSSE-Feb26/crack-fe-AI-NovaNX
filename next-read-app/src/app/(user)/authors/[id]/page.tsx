@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ShoppingCart } from "lucide-react";
 
+import heartIcon from "@/assets/icons/heart.svg";
 import bookIcon from "@/assets/icons/TrendingBook/Icon-1.svg";
 import starIcon from "@/assets/icons/TrendingBook/Icon.svg";
 import { AppNav } from "@/components/layout/app-nav";
@@ -83,14 +85,32 @@ function AuthorBookCard({ title, author, category, rating, coverClassName }: Boo
             {category}
           </p>
 
-          <div className="mt-auto flex items-center gap-1.5 text-gold">
-            <Image
-              src={starIcon}
-              alt=""
-              className="size-4"
-              aria-hidden="true"
-            />
-            <b className="text-sm leading-5">{rating.toFixed(1)}</b>
+          <div className="mt-auto flex items-center justify-between gap-3">
+            <div className="flex items-center gap-1.5 text-gold">
+              <Image
+                src={starIcon}
+                alt=""
+                className="size-4"
+                aria-hidden="true"
+              />
+              <b className="text-sm leading-5">{rating.toFixed(1)}</b>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-palette-indigo-300-20 bg-gray-200">
+                <ShoppingCart
+                  className="size-4 text-palette-slate-50"
+                  aria-hidden="true"
+                />
+              </span>
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-palette-indigo-300-20 bg-gray-200">
+                <Image
+                  src={heartIcon}
+                  alt=""
+                  className="size-4"
+                  aria-hidden="true"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </CardContent>

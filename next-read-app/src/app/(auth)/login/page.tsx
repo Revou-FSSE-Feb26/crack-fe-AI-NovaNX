@@ -117,7 +117,7 @@ export default function LoginPage() {
         {errors.root?.message && (
           <p
             role="alert"
-            className="text-center text-sm font-semibold text-destructive"
+            className="text-center text-sm font-semibold text-red-500"
           >
             {errors.root.message}
           </p>
